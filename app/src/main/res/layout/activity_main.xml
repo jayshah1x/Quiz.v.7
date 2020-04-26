@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/signup_back"
+        android:layout_width="473dp"
+        android:layout_height="800dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/signup_back" />
+
+    <ImageView
+        android:id="@+id/equation"
+        android:layout_width="415dp"
+        android:layout_height="638dp"
+        android:alpha="0.7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/equation" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="101dp"
+        android:text="Welcome User!, \n Login to get Started"
+        android:textColor="#000000"
+        android:textSize="33dp"
+        android:textStyle="bold"></TextView>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="244dp"
+        android:background="@drawable/username"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="username"
+        android:paddingLeft="50dp"
+        android:paddingTop="8dp"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/password"
+        android:ems="10"
+        android:paddingLeft="50dp"
+        android:paddingTop="8dp"
+        android:textAlignment="textStart"
+        android:inputType="textPassword"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/username"
+        android:hint="Password"
+        />
+
+
+
+    <CheckBox
+        android:id="@+id/remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="false"
+        android:layout_marginLeft="30dp"
+        android:buttonTint="#000000"
+        android:text="Remember Password  |"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        ></CheckBox>
+
+    <Switch
+        android:id="@+id/Switch"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/password"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/remember"
+        android:backgroundTint="#000000"
+        android:checked="false"
+        android:theme="@style/SwitchTheme"
+        ></Switch>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Administrator"
+        android:layout_toRightOf="@+id/Switch"
+        android:layout_below="@id/password"
+        android:layout_marginTop="3dp"></TextView>
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/custom_button"
+        android:text="GO"
+        android:textColor="#000000"
+        ></Button>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        android:background="#000000"
+        android:paddingBottom="10dp"
+        android:text="Don't have account? Register"
+        android:textColor="#FFFFFF"></Button>
+</RelativeLayout>
