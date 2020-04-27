@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,13 +7,75 @@
     tools:context=".Quiz">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/text_view_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="253dp"
-        android:text="quiz"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="Score: 0"
+        android:textColor="@android:color/black"
+        />
+    <TextView
+        android:id="@+id/text_view_question_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question: 1/x"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/text_view_score"
+        />
+    <TextView
+        android:id="@+id/text_view_countdonw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="45sp"
+        android:textColor="@android:color/black"
+        android:text="00:30"
+        android:layout_alignParentEnd="true"
+        />
+    <TextView
+        android:id="@+id/text_view_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question 1"
+        android:textSize="20sp"
+        android:layout_above="@+id/radio_group"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        />
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        >
+        <RadioButton
+            android:id="@+id/radio_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 1"
+            android:layout_below="@+id/radio_group"
+            />
+        <RadioButton
+            android:id="@+id/radio_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 2"
+            android:layout_below="@+id/radio_group"
+            />
+        <RadioButton
+            android:id="@+id/radio_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 3"
+            android:layout_below="@+id/radio_group"
+            />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_below="@id/radio_group"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="Button"></Button>
+</RelativeLayout>
